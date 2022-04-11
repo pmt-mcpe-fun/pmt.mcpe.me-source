@@ -3,8 +3,8 @@ include("lang/setlang.php");
 define('PACKAGE', 'pocketmine-frame-up');
 
 // gettext setting
-bindtextdomain(PACKAGE, 'lang'); // or $your_path/lang, ex: /var/www/test/lang
-textdomain(PACKAGE);
+// bindtextdomain(PACKAGE, 'lang'); // or $your_path/lang, ex: /var/www/test/lang
+// textdomain(PACKAGE);
 ?>
 <html><head><title><?php echo _('PocketMine Plugin Making Tools'); ?></title></head>
 <body><font face="Helvetica">
