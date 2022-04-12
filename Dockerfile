@@ -24,7 +24,7 @@ RUN chown -R root:www-data /var/www
 
 # install php extensions
 RUN apt update
-RUN apt install -y libzip-dev libyaml-dev
+RUN apt install -y libzip-dev libyaml-dev cron
 RUN pecl install zip
 RUN pecl install yaml
 RUN docker-php-ext-enable zip yaml
@@ -32,9 +32,9 @@ RUN docker-php-ext-enable zip yaml
 # enable mod_rewrite apache
 RUN a2enmod rewrite
 
-# remove cron from dir
+# remove cron from workdir
 COPY remove-data /etc/cron.d/remove-data
 RUN rm -rf remove-data
 RUN crontab /etc/cron.d/remove-data
-*/10 * * * * rm -rf /var/www/html/data/tmp/{*,.*} && rm -rf /var/www/html/data/phars/{*,.*}
+
 EXPOSE 80
