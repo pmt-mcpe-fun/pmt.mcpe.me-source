@@ -464,7 +464,7 @@ function unphar_toZip($tmpName, &$result, $name = ""){
 		$metadata = $phar->getMetadata();
 		if(isset($metadata["me.mcpe.pmt"])){
 			$result["pmt"] = $metadata["me.mcpe.pmt"];
-			$metadata["me.mcpe.pmt"] = "<pmt.mcpe.me metadata hidden>";
+			$metadata["me.mcpe.pmt"] = "<mcpeme.mcpe.fun metadata hidden>";
 		}
 		$zip->setArchiveComment(json_encode($phar->getMetadata(), JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES));
 		$zip->close();

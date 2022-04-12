@@ -1,5 +1,5 @@
 # web-server-source
-Source code for http://pmt.mcpe.me (partial)
+Source code for https://mcpeme.mcpe.fun (partial)
 
 ## Requirements
 * At least PHP 5.6 (default PHP 5 installation on apt is PHP 5.5, make sure to install PHP 5.6 instead), PHP 7.0+ _recommended_
@@ -30,7 +30,7 @@ This website generates files at /var/www/html/insta/data/ without deleting them.
 
 ===
 
-Here is a list of PHP extensions used by the website at pmt.mcpe.me:
+Here is a list of PHP extensions used by the website at mcpeme.mcpe.fun:
 
 ```
 Array

@@ -8,4 +8,6 @@ gc_last
 *.zip
 /pmb/
 /nowhere/
-
+cid.txt
+token.txt
+secret.txt

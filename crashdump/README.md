@@ -1,2 +1,2 @@
 # CrashDumpParserSource
-Source for http://pmt.mcpe.me/crashdump/
+Source for https://mcpeme.mcpe.fun/crashdump/
