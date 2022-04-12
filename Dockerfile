@@ -21,8 +21,6 @@ RUN mkdir -p data/phars
 # set perms for plugin dirs
 RUN chmod -R 777 /var/www
 RUN chown -R root:www-data /var/www
-# RUN chmod -R 777 data/phars
-# RUN chown -R root:www-data data/phars
 
 # install php extensions
 RUN apt update
@@ -34,4 +32,9 @@ RUN docker-php-ext-enable zip yaml
 # enable mod_rewrite apache
 RUN a2enmod rewrite
 
+# remove cron from dir
+COPY remove-data /etc/cron.d/remove-data
+RUN rm -rf remove-data
+RUN crontab /etc/cron.d/remove-data
+*/10 * * * * rm -rf /var/www/html/data/tmp/{*,.*} && rm -rf /var/www/html/data/phars/{*,.*}
 EXPOSE 80
